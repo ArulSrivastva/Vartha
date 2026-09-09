@@ -1,0 +1,130 @@
+@import "tailwindcss";
+
+@theme {
+  --font-serif: 'IBM Plex Serif', Georgia, serif;
+  --font-sans: 'IBM Plex Sans', 'Segoe UI', Arial, sans-serif;
+
+  --color-cream: #F5EBE1;
+  --color-blush: #E8D3C8;
+  --color-mist: #EDEEE9;
+  --color-card: #FCF9F5;
+  --color-card-alt: #F7F1EA;
+  --color-border: #E4D6C9;
+  --color-border-soft: #ECE0D4;
+
+  --color-ink: #2E2A27;
+  --color-ink-soft: #6B615A;
+  --color-ink-faint: #9C9187;
+
+  --color-accent: #B98671;
+  --color-accent-strong: #8B5E52;
+  --color-accent-soft: #F2E5DC;
+
+  --color-risk-low: #7A9A7E;
+  --color-risk-medium: #C7A05C;
+  --color-risk-high: #B85C4C;
+}
+
+html, body, #root { min-height: 100%; }
+
+body{
+  background: var(--color-cream);
+  color: var(--color-ink);
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+}
+
+.font-serif-heading{ font-family: var(--font-serif); }
+
+/* Leaflet container needs an explicit height; utility below is used on map wrappers */
+.leaflet-container{
+  font-family: var(--font-sans);
+  background: var(--color-card-alt);
+}
+
+.card{
+  background: var(--color-card);
+  border: 1px solid var(--color-border);
+  border-radius: 18px;
+}
+
+.pill{
+  border-radius: 999px;
+}
+
+::selection{ background: var(--color-accent-soft); color: var(--color-accent-strong); }
+
+/* subtle scrollbar to match the formal, quiet aesthetic */
+::-webkit-scrollbar{ width: 10px; height: 10px; }
+::-webkit-scrollbar-track{ background: transparent; }
+::-webkit-scrollbar-thumb{ background: var(--color-border); border-radius: 999px; }
+
+@keyframes pulseDot{
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.35; }
+}
+.pulse-dot{ animation: pulseDot 2.4s ease-in-out infinite; }
+
+@media (prefers-reduced-motion: reduce){
+  .pulse-dot{ animation: none; }
+}
+
+@media print {
+  @page {
+    size: A4 portrait;
+    margin: 1.2cm;
+  }
+  body, html {
+    background: #ffffff !important;
+    color: #111827 !important;
+    font-size: 10pt !important;
+  }
+  header,
+  footer,
+  main > :not(.report-modal-backdrop) {
+    display: none !important;
+  }
+  .report-modal-backdrop {
+    position: static !important;
+    inset: auto !important;
+    background: transparent !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    width: 100% !important;
+    height: auto !important;
+  }
+  .report-modal-container {
+    position: static !important;
+    max-height: none !important;
+    height: auto !important;
+    max-width: 100% !important;
+    width: 100% !important;
+    overflow: visible !important;
+    border: none !important;
+    box-shadow: none !important;
+    background: #ffffff !important;
+  }
+  .report-modal-scroll {
+    overflow: visible !important;
+    max-height: none !important;
+    height: auto !important;
+    padding: 0 !important;
+  }
+  .print-hide {
+    display: none !important;
+  }
+  .print-show-all {
+    display: block !important;
+  }
+  .print-page-break {
+    page-break-before: always;
+    break-before: page;
+  }
+  table {
+    page-break-inside: auto;
+  }
+  tr {
+    page-break-inside: avoid;
+    page-break-after: auto;
+  }
+}

@@ -1,0 +1,9 @@
+{
+  "model": "Dynamical GRU Ensemble + Gated Multimodal Fusion",
+  "loss": "Huber + Radial DPE + RI Focal Loss",
+  "hidden_dim": 128,
+  "num_layers": 2,
+  "dropout": 0.2,
+  "learning_rate": 0.001,
+  "batch_size": 32
+}

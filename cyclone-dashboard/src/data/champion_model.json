@@ -1,0 +1,39 @@
+{
+  "experiment_id": "TC-AI Phase 1 / Phase 4 Ensemble",
+  "primary_score": 48.267,
+  "component_horizon_scores": {
+    "6h": 20.600,
+    "12h": 39.400,
+    "24h": 84.800
+  },
+  "tie_break_values": {
+    "mean_wind_mae": 7.12,
+    "mean_wind_rmse": 9.84
+  },
+  "selection_rule": "Lowest mean DPE across 6h/12h/24h on unseen IBTrACS Test Split (2021-2023); ZERO TEMPORAL DATA LEAKAGE across seasonal boundaries.",
+  "data_source": "NOAA IBTrACS v04r01 + INSAT-3D MOSDAC",
+  "ranking": [
+    {
+      "experiment_id": "Phase 4 Gated Multimodal Fusion",
+      "primary_score": 48.267
+    },
+    {
+      "experiment_id": "Phase 1 Dynamical Ensemble (5 seeds)",
+      "primary_score": 54.800
+    },
+    {
+      "experiment_id": "Persistence Baseline",
+      "primary_score": 104.997
+    },
+    {
+      "experiment_id": "Climatology Baseline (5yr Running)",
+      "primary_score": 148.877
+    }
+  ],
+  "run_metadata": {
+    "date": "2026-09-06T12:45:29Z",
+    "device": "NVIDIA CUDA (RTX 3050)",
+    "epochs_trained": 15,
+    "dataset_samples": 1066
+  }
+}

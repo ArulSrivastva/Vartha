@@ -1,0 +1,18 @@
+{
+  "experiment_id": "TC-AI Phase 1/4 Champion",
+  "split": "test",
+  "samples": 331,
+  "parameter_count": 148290,
+  "validation_primary_score": 48.267,
+  "best_val_loss": 0.0094,
+  "per_horizon_track_mean_km": {
+    "6h": 20.60,
+    "12h": 39.40,
+    "24h": 84.80
+  },
+  "per_horizon_wind_mae": {
+    "6h": 3.84,
+    "12h": 5.92,
+    "24h": 7.12
+  }
+}

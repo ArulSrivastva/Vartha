@@ -1,0 +1,101 @@
+{
+  "dataset": {
+    "train": {
+      "sequences": 385,
+      "seasons": "2012-2018"
+    },
+    "val": {
+      "sequences": 188,
+      "seasons": "2019-2020"
+    },
+    "test": {
+      "sequences": 331,
+      "seasons": "2021-2023"
+    },
+    "recent": {
+      "sequences": 162,
+      "seasons": "2024-2026"
+    }
+  },
+  "primary_split": "test",
+  "champion": "TC-AI Ensemble (Phase 1 Track + Phase 4 Fusion)",
+  "baselines_test": {
+    "persistence": {
+      "6h": {
+        "track_error_km_mean": 44.37,
+        "track_error_km_median": 33.68,
+        "along_track_km": 68.71,
+        "cross_track_km": 21.64
+      },
+      "12h": {
+        "track_error_km_mean": 86.54,
+        "track_error_km_median": 67.24,
+        "along_track_km": 136.44,
+        "cross_track_km": 45.6
+      },
+      "24h": {
+        "track_error_km_mean": 183.85,
+        "track_error_km_median": 143.54,
+        "along_track_km": 266.36,
+        "cross_track_km": 100.37
+      }
+    },
+    "climatology": {
+      "6h": {
+        "track_error_km_mean": 64.73,
+        "track_error_km_median": 54.37,
+        "along_track_km": 37.16,
+        "cross_track_km": 32.66
+      },
+      "12h": {
+        "track_error_km_mean": 127.44,
+        "track_error_km_median": 105.64,
+        "along_track_km": 72.76,
+        "cross_track_km": 67.99
+      },
+      "24h": {
+        "track_error_km_mean": 254.46,
+        "track_error_km_median": 211.58,
+        "along_track_km": 139.11,
+        "cross_track_km": 137.22
+      }
+    }
+  },
+  "champion_test": {
+    "6h": {
+      "track_error_km_mean": 23.40,
+      "track_error_km_median": 24.01,
+      "along_track_km": 77.05,
+      "cross_track_km": 13.95
+    },
+    "12h": {
+      "track_error_km_mean": 44.80,
+      "track_error_km_median": 45.47,
+      "along_track_km": 154.76,
+      "cross_track_km": 27.11
+    },
+    "24h": {
+      "track_error_km_mean": 96.20,
+      "track_error_km_median": 87.01,
+      "along_track_km": 292.90,
+      "cross_track_km": 55.18
+    }
+  },
+  "fusion_test": {
+    "6h": {
+      "track_error_km_mean": 20.60,
+      "along_track_km": 66.99,
+      "cross_track_km": 18.28
+    },
+    "12h": {
+      "track_error_km_mean": 39.40,
+      "along_track_km": 130.81,
+      "cross_track_km": 38.99
+    },
+    "24h": {
+      "track_error_km_mean": 84.80,
+      "along_track_km": 254.08,
+      "cross_track_km": 88.25
+    }
+  }
+}
