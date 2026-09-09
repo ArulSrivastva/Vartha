@@ -2,11 +2,11 @@
 
 **AI/ML-Based Multi-Source Satellite Tropical Cyclone Identification, Classification, Pattern Analysis, and Track Prediction System**
 
-Built in accordance with [plan.md](file:///D:/AVV/70pe70/plan.md) using an incremental, defensible phase architecture.
+Built in accordance with [plan.md](plan.md) using an incremental, defensible phase architecture.
 
 ---
 
-## 🌪️ Architecture Overview
+## Architecture Overview
 
 ```
                           +-------------------------------+
@@ -50,7 +50,7 @@ Built in accordance with [plan.md](file:///D:/AVV/70pe70/plan.md) using an incre
 
 ---
 
-## 📊 Phase-by-Phase Experimental Verification
+## Phase-by-Phase Experimental Verification
 
 All phases are fully trained, strictly partitioned by storm season (Zero temporal leakage: Train 2012–2018, Val 2019–2020, Test 2021–2023), and verified with reproducible checkpoints saved in `experiments/`:
 
@@ -90,11 +90,11 @@ All phases are fully trained, strictly partitioned by storm season (Zero tempora
 
 ### Phase 6 (Stretch): Chained Real-Time Inference & Dashboard
 *Objective:* End-to-end operational pipeline chaining:
-`New Satellite Frame` ➔ `Phase 5 Detection` ➔ `Phase 2 Classification` ➔ `Phase 3 Intensity/RI` ➔ `Phase 4 Multimodal Forecast`.
+`New Satellite Frame` -> `Phase 5 Detection` -> `Phase 2 Classification` -> `Phase 3 Intensity/RI` -> `Phase 4 Multimodal Forecast`.
 
 ---
 
-## 🚀 Quickstart & Usage
+## Quickstart & Usage
 
 ### 1. Unified Master Pipeline Runner
 Execute any individual phase or the complete pipeline from the root directory:
@@ -199,7 +199,7 @@ python dashboard/app.py      # then click "Refresh Live Data"  (http://localhost
 
 ---
 
-## 📂 Project Structure
+## Project Structure
 
 ```
 ├── configs/
