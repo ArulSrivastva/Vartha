@@ -25,7 +25,7 @@ export default function Header({ meta, loading, onExport }){
         {/* Left branding */}
         <div>
           <div className="flex items-baseline gap-3">
-            <h1 className="font-serif text-[22px] font-bold tracking-tight text-ink">VARTHA</h1>
+            <h1 className="font-serif text-[22px] font-bold tracking-tight text-ink">Vartha</h1>
             <span className="text-[12px] font-medium tracking-wide text-ink-soft uppercase border-l border-border pl-3">
               Tropical Cyclone Intelligence &amp; Forecasting System
             </span>

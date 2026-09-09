@@ -47,7 +47,7 @@ export default function BaselineComparison() {
             <thead>
               <tr className="border-b border-border/80 text-ink-faint uppercase text-[9.5px] font-bold tracking-wider">
                 <th className="py-2">Horizon</th>
-                <th className="py-2 text-right">TC-AI Ensemble (Phase 1)</th>
+                <th className="py-2 text-right">Vartha Ensemble (Phase 1)</th>
                 <th className="py-2 text-right">Multimodal Fusion (Phase 4)</th>
                 <th className="py-2 text-right">Persistence</th>
                 <th className="py-2 text-right">Climatology</th>

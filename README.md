@@ -1,4 +1,4 @@
-# TC-AI: Multi-Source Tropical Cyclone Intelligence System
+# Vartha: Multi-Source Tropical Cyclone Intelligence System
 
 **AI/ML-Based Multi-Source Satellite Tropical Cyclone Identification, Classification, Pattern Analysis, and Track Prediction System**
 
@@ -122,7 +122,7 @@ python scripts/predict.py
 python scripts/predict.py --image path/to/frame.png --track-csv path/to/track.csv
 ```
 
-### 3. VARTHA — Tropical Cyclone Intelligence Dashboard
+### 3. Vartha — Tropical Cyclone Intelligence Dashboard
 Launch the modern React 19 + Vite web dashboard with real-time PyTorch ML API gateway:
 
 ```bash

@@ -181,7 +181,7 @@ export default function App() {
       <footer className="max-w-[1400px] mx-auto px-6 py-8 text-[11.5px] text-ink-faint border-t border-border mt-8">
         <div className="flex flex-col md:flex-row items-start md:items-center justify-between gap-4">
           <span>
-            VARTHA Cyclone Intelligence System · Experimental research prototype for SIH 2026. Real-time inference across satellite vision, multi-source atmospheric classification, and recurrent trajectory forecasting.
+            Vartha Cyclone Intelligence System · Experimental research prototype for SIH 2026. Real-time inference across satellite vision, multi-source atmospheric classification, and recurrent trajectory forecasting.
           </span>
           <span className="font-mono text-[10px] text-accent-strong bg-accent-soft/30 px-2 py-0.5 rounded">
             SIH 2026 Forecaster UI Handoff

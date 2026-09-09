@@ -153,7 +153,7 @@ export default function UnifiedAnalysisPanel({ data, loading, onReanalyze, backe
             <strong className="text-ink font-semibold">Research Prototype:</strong> Offline real-time machine learning system.
           </span>
           <span className="font-mono text-[10px] text-ink-faint font-semibold uppercase shrink-0 pl-2">
-            VARTHA · SIH 2026
+            Vartha · SIH 2026
           </span>
         </div>
       </div>

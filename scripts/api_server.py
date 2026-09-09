@@ -1,4 +1,4 @@
-"""REST API server for the real-time inference engine and VARTHA Dashboard.
+"""REST API server for the real-time inference engine and Vartha Dashboard.
 
 Endpoints:
   GET  /api/health          - system readiness & model pipeline indicators

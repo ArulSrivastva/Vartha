@@ -1,4 +1,4 @@
-# VARTHA — Tropical Cyclone Intelligence Dashboard
+# Vartha — Tropical Cyclone Intelligence Dashboard
 
 A React + Vite frontend for displaying the output of the AI/ML cyclone
 identification, classification and prediction system. This project covers

@@ -36,15 +36,15 @@ export default function ExportReportModal({ data, isOpen, onClose }) {
   if (!isOpen || !data) return null;
 
   const now = new Date().toISOString();
-  const filename = `TC_AI_VARTHA_Comprehensive_Report_${now.replace(/[:.]/g, '-')}.json`;
+  const filename = `Vartha_Comprehensive_Report_${now.replace(/[:.]/g, '-')}.json`;
 
   const isDetected = Boolean(data.detection?.detected);
 
   const reportPayload = {
-    document_title: "TC-AI (VARTHA) Comprehensive Scientific & Architectural Cyclone Report",
-    document_id: "TC-AI-EXP-2026-FINAL-V4",
+    document_title: "Vartha Comprehensive Scientific & Architectural Cyclone Report",
+    document_id: "Vartha-EXP-2026-FINAL-V4",
     generated_at_utc: now,
-    system_designation: "VARTHA (Visual & Analytical Real-Time TC Hazard Assessment)",
+    system_designation: "Vartha (Visual & Analytical Real-Time TC Hazard Assessment)",
     target_basin: data.meta?.basin || "North Indian Ocean (Bay of Bengal & Arabian Sea)",
     active_cyclone: {
       system_id: data.meta?.systemId || (isDetected ? "USER-TRACK" : "NIO-LIVE"),
@@ -177,7 +177,7 @@ export default function ExportReportModal({ data, isOpen, onClose }) {
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>TC-AI (VARTHA) - Comprehensive Cyclone Report</title>
+  <title>Vartha - Comprehensive Cyclone Report</title>
   <style>
     @page {
       size: A4 portrait;
@@ -301,8 +301,8 @@ export default function ExportReportModal({ data, isOpen, onClose }) {
   <!-- HEADER -->
   <div class="header-banner">
     <div>
-      <span class="badge">TC-AI (VARTHA) OPERATIONAL REPORT</span>
-      <span style="font-family: monospace; font-size: 8.5pt; color: #6B7280;">DOC ID: TC-AI-EXP-2026-FINAL-V4 · Generated UTC: ${now}</span>
+      <span class="badge">Vartha OPERATIONAL REPORT</span>
+      <span style="font-family: monospace; font-size: 8.5pt; color: #6B7280;">DOC ID: Vartha-EXP-2026-FINAL-V4 · Generated UTC: ${now}</span>
     </div>
     <h1 style="font-size: 18pt; margin: 6px 0 2px 0;">Comprehensive Scientific &amp; Operational Cyclone Report</h1>
     <div style="font-size: 9pt; color: #4B5563;">
@@ -486,21 +486,21 @@ export default function ExportReportModal({ data, isOpen, onClose }) {
   </h3>
   <div style="font-size: 9pt; line-height: 1.5; color: #374151;">
     <p>
-      <strong>[Lead Time] Extended Evacuation Window:</strong> While heavy Numerical Weather Prediction (NWP) models update every 6 to 12 hours, VARTHA executes full chained inference in <strong>17.11 milliseconds</strong> on every 30-minute INSAT satellite frame. Coupled with <strong>68.2% Rapid Intensification recall</strong>, disaster authorities gain <strong>6 to 12 hours of additional lead time</strong> for staged coastal evacuations and pre-positioning NDRF/SDRF assets.
+      <strong>[Lead Time] Extended Evacuation Window:</strong> While heavy Numerical Weather Prediction (NWP) models update every 6 to 12 hours, Vartha executes full chained inference in <strong>17.11 milliseconds</strong> on every 30-minute INSAT satellite frame. Coupled with <strong>68.2% Rapid Intensification recall</strong>, disaster authorities gain <strong>6 to 12 hours of additional lead time</strong> for staged coastal evacuations and pre-positioning NDRF/SDRF assets.
     </p>
     <p>
-      <strong>[Economic] Minimized Economic Disruption:</strong> By narrowing 24-hour track error to <strong>84.80 km</strong>, VARTHA reduces the projected landfall uncertainty corridor by <strong>20 to 30 km</strong>. This prevents unnecessary commercial port closures (e.g. Paradip, Visakhapatnam, Kandla), rail cancellations, and excessive evacuations in non-impacted districts, safeguarding public funds and economic continuity.
+      <strong>[Economic] Minimized Economic Disruption:</strong> By narrowing 24-hour track error to <strong>84.80 km</strong>, Vartha reduces the projected landfall uncertainty corridor by <strong>20 to 30 km</strong>. This prevents unnecessary commercial port closures (e.g. Paradip, Visakhapatnam, Kandla), rail cancellations, and excessive evacuations in non-impacted districts, safeguarding public funds and economic continuity.
     </p>
     <p>
       <strong>[Resilience] Targeted Coastal Protection:</strong> Engineered specifically for the North Indian Ocean basin, providing localized risk intelligence for vulnerable coastal communities across <strong>Odisha, Andhra Pradesh, West Bengal, Tamil Nadu, and Gujarat</strong>.
     </p>
     <p>
-      <strong>[Governance] Human-in-the-Loop DSS Mandate:</strong> VARTHA is explicitly engineered as an operational <strong>Decision Support System (DSS)</strong> to augment—not replace—expert human meteorologists and the India Meteorological Department (IMD). All outputs provide explicit confidence bounds, uncertainty radii, and data provenance.
+      <strong>[Governance] Human-in-the-Loop DSS Mandate:</strong> Vartha is explicitly engineered as an operational <strong>Decision Support System (DSS)</strong> to augment—not replace—expert human meteorologists and the India Meteorological Department (IMD). All outputs provide explicit confidence bounds, uncertainty radii, and data provenance.
     </p>
   </div>
 
   <div class="footer-note">
-    TC-AI (VARTHA) System · Document ID: TC-AI-EXP-2026-FINAL-V4 · Tested on NVIDIA GeForce RTX 3050 6GB Laptop GPU (17.11 ms/sample) · Strict seasonal partition protocol (Zero temporal data leakage).
+    Vartha System · Document ID: Vartha-EXP-2026-FINAL-V4 · Tested on NVIDIA GeForce RTX 3050 6GB Laptop GPU (17.11 ms/sample) · Strict seasonal partition protocol (Zero temporal data leakage).
   </div>
 
 </body>
@@ -525,10 +525,10 @@ export default function ExportReportModal({ data, isOpen, onClose }) {
           <div>
             <div className="flex items-center gap-2">
               <span className="text-[10px] uppercase font-bold text-accent-strong tracking-wider font-mono bg-accent-soft/40 px-2 py-0.5 rounded">
-                TC-AI (VARTHA) · Operational Solution Report
+                Vartha · Operational Solution Report
               </span>
               <span className="text-[10px] font-mono text-ink-faint">
-                DOC ID: TC-AI-EXP-2026-FINAL-V4
+                DOC ID: Vartha-EXP-2026-FINAL-V4
               </span>
             </div>
             <h2 className="font-serif text-[22px] font-bold text-ink mt-1">
@@ -889,7 +889,7 @@ export default function ExportReportModal({ data, isOpen, onClose }) {
                   [Lead Time] Extended Evacuation Window
                 </h4>
                 <p className="text-[11.5px] text-ink-soft leading-relaxed">
-                  While heavy Numerical Weather Prediction (NWP) models update only every 6 to 12 hours, VARTHA executes chained inference in <strong>17 milliseconds</strong> on every 30-minute INSAT satellite frame. Coupled with <strong>68.2% Rapid Intensification recall</strong>, disaster authorities gain <strong>6 to 12 hours of critical lead time</strong> for staged evacuations and pre-positioning NDRF/SDRF personnel.
+                  While heavy Numerical Weather Prediction (NWP) models update only every 6 to 12 hours, Vartha executes chained inference in <strong>17 milliseconds</strong> on every 30-minute INSAT satellite frame. Coupled with <strong>68.2% Rapid Intensification recall</strong>, disaster authorities gain <strong>6 to 12 hours of critical lead time</strong> for staged evacuations and pre-positioning NDRF/SDRF personnel.
                 </p>
               </div>
 
@@ -898,7 +898,7 @@ export default function ExportReportModal({ data, isOpen, onClose }) {
                   [Economic] Minimized Economic Disruption
                 </h4>
                 <p className="text-[11.5px] text-ink-soft leading-relaxed">
-                  By tightening 24-hour track error to <strong>84.80 km</strong> (vs 184.0 km persistence baseline), VARTHA narrows the projected landfall corridor by <strong>20 to 30 km</strong>. This prevents unnecessary commercial port shutdowns (Paradip, Visakhapatnam, Kandla), rail halts, and excessive mass evacuations in unaffected coastal districts, saving millions of dollars.
+                  By tightening 24-hour track error to <strong>84.80 km</strong> (vs 184.0 km persistence baseline), Vartha narrows the projected landfall corridor by <strong>20 to 30 km</strong>. This prevents unnecessary commercial port shutdowns (Paradip, Visakhapatnam, Kandla), rail halts, and excessive mass evacuations in unaffected coastal districts, saving millions of dollars.
                 </p>
               </div>
 
@@ -907,7 +907,7 @@ export default function ExportReportModal({ data, isOpen, onClose }) {
                   [Resilience] Localized Coastal Protection
                 </h4>
                 <p className="text-[11.5px] text-ink-soft leading-relaxed">
-                  VARTHA is engineered specifically for the shallow bathymetry and high vulnerability of the North Indian Ocean basin, providing targeted operational guidance for coastal sectors in <strong>Odisha, Andhra Pradesh, West Bengal, Tamil Nadu, and Gujarat</strong>.
+                  Vartha is engineered specifically for the shallow bathymetry and high vulnerability of the North Indian Ocean basin, providing targeted operational guidance for coastal sectors in <strong>Odisha, Andhra Pradesh, West Bengal, Tamil Nadu, and Gujarat</strong>.
                 </p>
               </div>
 
@@ -916,7 +916,7 @@ export default function ExportReportModal({ data, isOpen, onClose }) {
                   [Governance] Human-in-the-Loop Decision Support (DSS)
                 </h4>
                 <p className="text-[11.5px] text-ink-soft leading-relaxed">
-                  VARTHA does not replace meteorologists or the India Meteorological Department (IMD). It functions as an explainable, audited <strong>Decision Support System</strong>, equipping human experts with confidence scores, calibrated uncertainty cones, and saliency heatmaps for safer, faster decisions.
+                  Vartha does not replace meteorologists or the India Meteorological Department (IMD). It functions as an explainable, audited <strong>Decision Support System</strong>, equipping human experts with confidence scores, calibrated uncertainty cones, and saliency heatmaps for safer, faster decisions.
                 </p>
               </div>
             </div>
@@ -943,7 +943,7 @@ export default function ExportReportModal({ data, isOpen, onClose }) {
           {/* Official Scientific & Governance Disclaimer */}
           <div className="p-3.5 bg-card-alt/80 border border-border/70 rounded-xl text-[10.5px] text-ink-soft leading-relaxed font-mono">
             <strong className="text-ink block mb-0.5 font-sans font-bold">Scientific Integrity &amp; Protocol Disclosure:</strong>
-            TC-AI (VARTHA) Evaluation certified under Document ID <code>TC-AI-EXP-2026-FINAL-V4</code>. All 27 operational target benchmarks verified on real NOAA IBTrACS v04r01, ISRO MOSDAC INSAT-3D/3DR, and ECMWF ERA5 with strict seasonal partitioning (Zero Temporal Data Leakage). System operates as an operational Decision Support System (DSS).
+            Vartha Evaluation certified under Document ID <code>Vartha-EXP-2026-FINAL-V4</code>. All 27 operational target benchmarks verified on real NOAA IBTrACS v04r01, ISRO MOSDAC INSAT-3D/3DR, and ECMWF ERA5 with strict seasonal partitioning (Zero Temporal Data Leakage). System operates as an operational Decision Support System (DSS).
           </div>
 
         </div>
