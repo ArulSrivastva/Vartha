@@ -1,0 +1,65 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+env/
+venv/
+.venv/
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+
+# Testing & Logs
+.pytest_cache/
+.coverage
+htmlcov/
+*.log
+error_logs/
+
+# Model Checkpoints & Large Binaries
+*.pt
+*.pth
+*.onnx
+*.bin
+*.h5
+*.ckpt
+*.db
+*.sqlite
+*.sqlite3
+
+# Archives & Temporary Artifacts
+*.zip
+*.tar.gz
+TC_AI_VARTHA_Comprehensive_Report_*.json
+
+# Audits, Benchmarks & Large External Dumps
+experiments/
+data/external/ibtracs.NI.list.v04r01.csv
+
+# Frontend dependencies and builds
+node_modules/
+cyclone-dashboard/node_modules/
+cyclone-dashboard/dist/
+cyclone-dashboard/dist-ssr/
+.npm
+
+# OS and IDE
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+.gemini/

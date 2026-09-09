@@ -1,0 +1,91 @@
+# TC-AI Configuration
+device: cuda
+seed: 42
+
+satellite:
+  channels: ["IR", "WV", "VIS"]
+  image_size: [512, 512]
+  num_temporal_frames: 6
+  temporal_interval_hours: 3
+
+weather:
+  era5_variables: ["u10", "v10", "t2m", "msl", "tcwv", "sst", "u200", "v200", "u850", "v850", "z500"]
+  grid_resolution: 0.25
+
+track:
+  history_length: 6
+  forecast_horizons: [6, 12, 24]
+
+detection:
+  model_type: heatmap
+  backbone: unet
+  num_classes: 2
+  confidence_threshold: 0.5
+  input_channels: 3
+
+classification:
+  stage_classes: ["no_disturbance", "low_pressure", "depression", "deep_depression", "cyclonic_storm", "severe_cyclonic_storm", "very_severe_cyclonic_storm", "extremely_severe_cyclonic_storm"]
+  structure_classes: ["developing", "mature", "weakening", "eye_forming", "eye_present", "eyewall_organized", "highly_asymmetric", "sheared", "rapidly_intensifying", "land_interaction", "dissipating"]
+  backbone: efficientnet_b4
+  pretrained: true
+  dropout: 0.3
+
+pattern:
+  temporal_classes: ["developing", "intensifying", "rapid_intensification", "mature", "weakening", "sheared", "recurving", "land_interaction", "dissipating"]
+  sequence_length: 6
+  model_type: convlstm
+  hidden_dim: 256
+  num_layers: 3
+  num_heads: 8
+  multi_label: true
+
+prediction:
+  model_type: gru
+  hidden_dim: 256
+  num_layers: 3
+  num_heads: 8
+  forecast_horizons: [6, 12, 24]
+  predict_intensity: true
+  uncertainty_estimation: true
+  num_mc_samples: 50
+
+fusion:
+  fusion_type: transformer
+  embedding_dim: 512
+  num_fusion_layers: 4
+  num_heads: 8
+  dropout: 0.1
+
+training:
+  batch_size: 16
+  learning_rate: 0.0001
+  weight_decay: 0.00001
+  num_epochs: 100
+  scheduler: cosine
+  warmup_epochs: 5
+  gradient_clip: 1.0
+  mixed_precision: true
+  lambda_detection: 1.0
+  lambda_classification: 1.0
+  lambda_pattern: 1.0
+  lambda_track: 2.0
+  lambda_intensity: 1.0
+  lambda_uncertainty: 0.5
+  stage1_epochs: 30
+  stage2_epochs: 30
+  stage3_epochs: 30
+  stage4_epochs: 40
+  stage5_epochs: 20
+  stage6_epochs: 20
+  stage7_epochs: 30
+
+data:
+  root_dir: ./data
+  ibtracs_path: ./data/ibtracs_nio.csv
+  era5_path: ./data/era5
+  insat_path: ./data/mosdac
+  nwp_path: ./data/nwp
+  ocean_path: ./data/ocean
+  train_ratio: 0.7
+  val_ratio: 0.15
+  test_ratio: 0.15
